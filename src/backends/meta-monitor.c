@@ -30,7 +30,7 @@
 #include "backends/meta-backlight-private.h"
 #include "core/boxes-private.h"
 
-#define MAX_DENOMINATOR 4
+#define MAX_DENOMINATOR 5
 #define MIN_INTEGER_SCALE 1
 #define MAX_INTEGER_SCALE 4
 #define MINIMUM_LOGICAL_AREA (800 * 480)

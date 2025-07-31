@@ -7,8 +7,8 @@ Monitors:
 │  │   └──3840x2160@60.000
 │  │       ├──Dimension: 3840x2160
 │  │       ├──Refresh rate: 60.000
-│  │       ├──Preferred scale: 2.5
-│  │       ├──Supported scales: [1.0, 1.25, 1.3333333730697632, 1.5, 1.6666666269302368, 2.0, 2.5, 2.6666667461395264, 3.0, 3.3333332538604736, 3.75, 4.0]
+│  │       ├──Preferred scale: 2.4000000953674316
+│  │       ├──Supported scales: [1.0, 1.2000000476837158, 1.25, 1.3333333730697632, 1.5, 1.600000023841858, 1.6666666269302368, 2.0, 2.4000000953674316, 2.5, 2.6666667461395264, 3.0, 3.200000047683716, 3.3333332538604736, 3.75, 4.0]
 │  │       └──Properties: (2)
 │  │           ├──is-current ⇒  yes
 │  │           └──is-preferred ⇒  yes
@@ -29,8 +29,8 @@ Monitors:
    │   └──2560x1440@60.000
    │       ├──Dimension: 2560x1440
    │       ├──Refresh rate: 60.000
-   │       ├──Preferred scale: 1.6666666269302368
-   │       ├──Supported scales: [1.0, 1.25, 1.3333333730697632, 1.6666666269302368, 2.0, 2.5, 2.6666667461395264]
+   │       ├──Preferred scale: 1.600000023841858
+   │       ├──Supported scales: [1.0, 1.25, 1.3333333730697632, 1.600000023841858, 1.6666666269302368, 2.0, 2.5, 2.6666667461395264]
    │       └──Properties: (2)
    │           ├──is-current ⇒  yes
    │           └──is-preferred ⇒  yes
@@ -47,15 +47,15 @@ Monitors:
 Logical monitors:
 ├──Logical monitor #1
 │  ├──Position: (0, 0)
-│  ├──Scale: 2.5
+│  ├──Scale: 2.4000000953674316
 │  ├──Transform: normal
 │  ├──Primary: yes
 │  ├──Monitors: (1)
 │  │   └──DP-1 (MetaProduct's Inc. 14")
 │  └──Properties: (0)
 └──Logical monitor #2
-   ├──Position: (1536, 0)
-   ├──Scale: 1.6666666269302368
+   ├──Position: (1600, 0)
+   ├──Scale: 1.600000023841858
    ├──Transform: normal
    ├──Primary: no
    ├──Monitors: (1)
