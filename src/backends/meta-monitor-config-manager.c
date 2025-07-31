@@ -1914,14 +1914,12 @@ meta_verify_logical_monitor_config (MetaLogicalMonitorConfig    *logical_monitor
     {
     case META_LOGICAL_MONITOR_LAYOUT_MODE_LOGICAL:
       {
-        float scaled_width = mode_width / scale;
-        float scaled_height = mode_height / scale;
-
-        if (floorf (scaled_width) != scaled_width ||
-            floorf (scaled_height) != scaled_height)
+        if (roundf (roundf (mode_width / scale) * scale) != mode_width ||
+            roundf (roundf (mode_height / scale) * scale) != mode_height)
           {
             g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
-                         "Scaled logical monitor size is fractional");
+                         "Scaled logical resolution does not round to the "
+                         "physical resolution");
             return FALSE;
           }
 

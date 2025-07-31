@@ -955,9 +955,20 @@ check_expected_scales (MetaMonitor                 *monitor,
 
       if (!(constraints & META_MONITOR_SCALES_CONSTRAINT_NO_FRAC))
         {
-          /* Also ensure that the scale will generate an integral resolution */
-          g_assert_cmpfloat (fmodf (width / scales[i], 1.0), ==, 0.0);
-          g_assert_cmpfloat (fmodf (height / scales[i], 1.0), ==, 0.0);
+          int logical_width, logical_height;
+          int generated_width, generated_height;
+
+          /* Also ensure that the scale will generate the correct physical
+           * resolution when stored as an integral logical resolution
+           * (providing rounding is used).
+           */
+          logical_width = (int) roundf (width / scales[i]);
+          generated_width = (int) roundf (logical_width * scales[i]);
+          g_assert_cmpint (generated_width, ==, width);
+
+          logical_height = (int) roundf (height / scales[i]);
+          generated_height = (int) roundf (logical_height * scales[i]);
+          g_assert_cmpint (generated_height, ==, height);
         }
 
       if (i > 0)
